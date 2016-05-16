@@ -12,6 +12,9 @@
         <div class="error">
             <?php echo $error; ?>
         </div>
+        <div class="info">
+            <a href="index.php">На головну</a>
+        </div>
     </div>
 </div>
 </body>

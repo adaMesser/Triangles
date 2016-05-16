@@ -6,10 +6,7 @@ function init()
 
     if (!is_numeric($_POST['sideA']) || !is_numeric($_POST['sideB']) || !is_numeric($_POST['sideC'])) {
         $error = 'Невірно введені значення';
-        ob_start();
         require __DIR__ . '/error.php';
-        $content = ob_get_clean();
-        require __DIR__ . '/main.php';
         exit;
     }
 
@@ -20,10 +17,7 @@ function init()
     //сума двох сторін менша чи рівна за третю - це не трикутник
     if ($sideA + $sideB <= $sideC || $sideA + $sideC <= $sideB || $sideC + $sideB <= $sideA) {
         $error = 'Некоректні значення: фігура із вказаними сторонами не є трикутником';
-        ob_start();
         require __DIR__ . '/error.php';
-        $content = ob_get_clean();
-        require __DIR__ . '/main.php';
         exit;
     }
 

@@ -15,10 +15,11 @@ body {
 }
 
 .content {
-    background-color: rgba(255, 255, 255, .6);
+    background: linear-gradient(to bottom right,  rgba(30, 144, 255, .8),rgba(255, 215, 0, .8));
     padding-bottom: 10px;
+    padding-top: 10px;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 530px;
 }
 
@@ -38,10 +39,15 @@ input, select {
     background: #FFFAF0 !important;
     outline: none;
     height: 30px;
-    width: 120px;
+    width: 100px;
     font-size: 16px;
 }
-
+select{
+    width: 180px;
+}
+input[type=submit]{
+    background-color: rgba(200, 100, 150, .6)!important;
+}
 table {
     border-spacing: 0 10px;
     margin: auto;
@@ -62,29 +68,14 @@ td {
     border: 2px solid rgba(255, 255, 255, .15);
     font-size: 16px;
     padding: 5px 5px;
-}
-
-header {
-    background-color: rgba(200, 100, 150, .2);
-    height: 40px;
-    width: 100%;
-    border-radius: 15px 15px 0px 0px;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 5px;
-
 }
 
-.create {
-    padding: 5px 5px;
-    text-align: center;
-    font-size: 16px;
-}
 
-/*блок для сообщения об удалении,
+/*
 блок сообщения об ошибке
 блок для кнопки save*/
-.delete, .error, .center_button {
+.error, .center_button, .info{
     text-align: center;
 }
 
@@ -93,6 +84,12 @@ header {
     color: red;
     font-weight: bold;
     font-size: 18px;
+}
+.info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /*ссылка при наведении*/

@@ -1,15 +1,30 @@
 <?php
-function info_about_triangle(triangle $triangle){
+function info_about_triangle(triangle $triangle)
+{
 
-echo
-    '<p>Цей трикутник -',$triangle->getType(),' </p>',
-'<p>Його сторони відповіно дорівнюють  '
-    ,$triangle->getSideA(),
-    $triangle->getSideB(),
-    $triangle->getSideC(),'</p>
+    switch ($triangle->getType()){
+        case 1:
+            $tr_type='різносторонній';
+            break;
+        case 2:
+            $tr_type='рівнобедренний';
+            break;
+        case 3:
+            $tr_type='рівносторонній';
+            break;
+        case 4:
+            $tr_type='прямокутний';
+            break;
+    }
+    echo
+    '<p>Цей трикутник ', $tr_type, ' </p>',
+    '<p>Його сторони відповіно дорівнюють  '
+    , $triangle->getSideA(), ', ',
+    $triangle->getSideB(), ', ',
+    $triangle->getSideC(), '</p>
     <p>Периметр трикутника дорівнює  ',
-    $triangle->get_perimeter(),'</p><p>
-    Площа трикутника дорівнює',$triangle->get_area(),'</p>';
+    $triangle->get_perimeter(), '</p><p>
+    Площа трикутника дорівнює', $triangle->get_area(), '</p>';
 }
 
 class triangle
@@ -107,6 +122,7 @@ class triangle
     }
 
 }
+
 //різносторонній
 class scalene_triangle extends triangle
 {
@@ -115,13 +131,15 @@ class scalene_triangle extends triangle
         $perimeter = $this->getSideA() + $this->getSideB() + $this->getSideC();
         return $perimeter;
     }
+
     public function get_area()
     {
-        $p=$this->get_perimeter()/2;
-        $area = sqrt($p*($p-$this->getSideA())*($p-$this->getSideB())*($p-$this->getSideC()));
+        $p = $this->get_perimeter() / 2;
+        $area = sqrt($p * ($p - $this->getSideA()) * ($p - $this->getSideB()) * ($p - $this->getSideC()));
         return $area;
     }
 }
+
 //рівнобедрений
 class isosceles_triangle extends scalene_triangle
 {
@@ -137,9 +155,10 @@ class equilateral_triangle extends triangle
         $perimeter = 3 * $this->getSideA();
         return $perimeter;
     }
+
     public function get_area()
     {
-        $area = ($this->getSideA()*$this->getSideA()*sqrt(3))/4;
+        $area = ($this->getSideA() * $this->getSideA() * sqrt(3)) / 4;
         return $area;
     }
 }

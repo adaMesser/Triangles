@@ -9,13 +9,18 @@
 <body>
 <div class="center">
     <div class="content">
-        <?php
+        <div class="info">
+            <?php
 
-        require __DIR__ . '/func.php';
-        require __DIR__ . '/init.php';
-        $triangle = init();
-        info_about_triangle($triangle);
-        ?>
+            require __DIR__ . '/func.php';
+            require __DIR__ . '/init.php';
+            $triangle = init();
+            info_about_triangle($triangle);
+
+            ?>
+            <a href="index.php">На головну</a>
+        </div>
+
     </div>
 </div>
 </body>
