@@ -2,18 +2,18 @@
 function info_about_triangle(triangle $triangle)
 {
 
-    switch ($triangle->getType()){
+    switch ($triangle->getType()) {
         case 1:
-            $tr_type='різносторонній';
+            $tr_type = 'різносторонній';
             break;
         case 2:
-            $tr_type='рівнобедренний';
+            $tr_type = 'рівнобедренний';
             break;
         case 3:
-            $tr_type='рівносторонній';
+            $tr_type = 'рівносторонній';
             break;
         case 4:
-            $tr_type='прямокутний';
+            $tr_type = 'прямокутний';
             break;
     }
     echo

@@ -6,7 +6,7 @@ function init()
 
     if (!is_numeric($_POST['sideA']) || !is_numeric($_POST['sideB']) || !is_numeric($_POST['sideC'])) {
         $error = 'Невірно введені значення';
-        header('Location: error.php?error='.$error);
+        header('Location: error.php?error=' . $error);
         exit;
     }
 
@@ -17,7 +17,7 @@ function init()
     //сума двох сторін менша чи рівна за третю - це не трикутник
     if ($sideA + $sideB <= $sideC || $sideA + $sideC <= $sideB || $sideC + $sideB <= $sideA) {
         $error = 'Некоректні значення: фігура із вказаними сторонами не є трикутником';
-        header('Location: error.php?error='.$error);
+        header('Location: error.php?error=' . $error);
         exit;
     }
 
@@ -41,4 +41,5 @@ function init()
     }
     return $triangle;
 }
+
 ?>

@@ -16,41 +16,41 @@
             <table>
                 <tr>
                     <td>
-                    <label for="sideA">Сторона A</label>
-                        </td>
+                        <label for="sideA">Сторона A</label>
+                    </td>
                     <td>
-                    <input type="text" id="sideA" name="sideA">
+                        <input type="text" id="sideA" name="sideA">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                    <label for="sideB">Сторона B</label>
+                        <label for="sideB">Сторона B</label>
                     </td>
                     <td>
-                    <input type="text" id="sideB" name="sideB">
+                        <input type="text" id="sideB" name="sideB">
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                    <label for="sideC">Сторона C</label>
+                        <label for="sideC">Сторона C</label>
                     </td>
                     <td>
-                    <input type="text" id="sideC" name="sideC">
+                        <input type="text" id="sideC" name="sideC">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                    <label for="type">Тип трикутника</label>
+                        <label for="type">Тип трикутника</label>
                     </td>
                     <td>
-                    <select id="type" name="type">
-                        <option selected value="1">Різносторонній</option>
-                        <option value="2">Рівнобедрений</option>
-                        <option value="3">Рівносторонній</option>
-                        <option value="4">Прямокутний</option>
-                    </select>
+                        <select id="type" name="type">
+                            <option selected value="1">Різносторонній</option>
+                            <option value="2">Рівнобедрений</option>
+                            <option value="3">Рівносторонній</option>
+                            <option value="4">Прямокутний</option>
+                        </select>
                     </td>
                 </tr>
 
