@@ -10,7 +10,7 @@
 <div class="center">
     <div class="content">
         <div class="error">
-            <?php echo $error; ?>
+            <?php echo $_GET['error']; ?>
         </div>
         <div class="info">
             <a href="index.php">На головну</a>
