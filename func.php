@@ -24,7 +24,7 @@ function info_about_triangle(triangle $triangle)
     $triangle->getSideC(), '</p>
     <p>Периметр трикутника дорівнює  ',
     $triangle->get_perimeter(), '</p><p>
-    Площа трикутника дорівнює', $triangle->get_area(), '</p>';
+    Площа трикутника дорівнює ', number_format($triangle->get_area(), 3, '.', ''), '</p>';
 }
 
 class triangle
